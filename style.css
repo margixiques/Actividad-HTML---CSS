@@ -1,6 +1,4 @@
 :root {
-    box-sizing: content-box;
-
     /* Primary Colors */
     --moderat-violet: hsl(263, 55%, 52%);
     --very-dark-grayish-blue: hsl(217, 19%, 35%);
@@ -29,7 +27,7 @@ body {
     font-size: 13px;
     font-family: var(--barlow-semi-condensed);
     background-color: var(--light-grayish-blue);
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 .container {
@@ -60,7 +58,7 @@ body {
    border-radius: 15px;
    padding: 2rem;
    width: 80%;
-   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card--quotation {
@@ -77,9 +75,13 @@ body {
 
 .card__image {
     border-radius: 50px;
-    border: 0.2rem solid var(--light-gray-status);
+    border: 0.15rem solid var(--light-gray-status);
     width: 2rem;
     height: 2rem;
+}
+
+.card__image--purple {
+    border-color: var(--moderat-violet);
 }
 
 .card__name {
@@ -99,7 +101,7 @@ body {
 .card__summary {
     padding: 1rem 0;
     font-size: 21px;
-    font-weight: bold;
+    font-weight: 600;
     color: var(--white);
 }
 
@@ -153,7 +155,7 @@ body {
     .section-0 {
         display: flex;
         flex-direction: column;
-        width: 75%; 
+        width: 75%;     
     }
 
     .section-1 {
@@ -165,7 +167,7 @@ body {
     .section-2 {
         flex-direction: row;
         justify-content: flex-end;
-        padding:  0 0 2rem;
+        padding:  0 0 2rem;    
     }
 
     .section-3 {
@@ -188,8 +190,10 @@ body {
     .card--dark-gray {
         width: 50%;
     }
-    .card--last-one {
+
+    .card--white-second {
         width: 60%;
+        min-width: 180px;
         height: 100%;
     }
 }
